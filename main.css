@@ -1,0 +1,44 @@
+.hidden{
+    display: none;
+}
+body{
+    background-color: #35654d;
+    box-sizing: border-box;
+}
+body *{
+    box-sizing: border-box;
+}
+/* kontener */
+.container{
+
+}
+/* naglowek */
+header{
+
+}
+/* okno startowe */
+#windowStart{
+
+}
+/* ustawienia */
+#windowSettings>label{
+    display: block;
+}
+/* gra */
+main{
+
+}
+/* zasady */
+aside{
+
+}
+
+a {  
+
+}
+
+/* stopka */
+footer{
+
+}
+

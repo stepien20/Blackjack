@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gra w blackjacka</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+    <script src="karty.js" defer></script>
+</head>
+<body>
+    <div class="container">
+    <!-- tytul -->
+    <header>
+            <h1>Blackjack</h1>
+    </header>
+    <!-- pierwsze okno czy chcesz zagrac -->
+    <section id="windowStart">
+        <h2>Czy chcesz zagrać?</h2>
+        <button id="butstart">Zagraj</button>
+    </section>
+    <!-- ustawienia gry -->
+    <section id="windowSettings" class="hidden"> 
+        <label for="decknum">Jaką ilością talii kart zagrać? <input type="number" id="decknum" name="decknum"></label>
+        <label for="bet">Stawka: <input type="number"></label>
+        <p>Potencjalna wygrana:<span id="betWin"></span></p>
+        <button id="butPlay">Graj</button>
+    </section>
+    <!-- okno gry -->
+    <main class="hidden"> 
+        <div id="usercards"></div>
+        <div id="croupiercards"></div>
+        <div id="buttons">
+            <button id="hit">Hit</button>
+            <button id="stand">Stand</button>
+            <button id="quit">Wyjdź</button>
+        </div>
+    </main>
+    <!-- zasady -->
+    <aside class="hidden">
+        <h2>Zasady</h2>
+        <ul>
+            <li>Zadaniem gracza jest uzyskanie wyniku jak nabliżej 21 punktów nie przekraczając tej liczby.</li>
+            <li>Gracz i krupier dostają po 2 karty: gracz 2 odsłonięte, natomiast krupier 1 odkrytą jedną ukrytą.</li>
+            <li>Gracz po rozdaniu może: 
+                <ul>
+                <li>Dobrać kartę-hit</li>
+                <li>Nie dobierać karty-stand</li>
+                </ul>
+            </li>
+            <li><a href="punktacja.html" target="_blank">Punktacja</a></li>
+        </ul>
+    </aside>
+    <!-- stopka -->
+    <footer>
+
+
+    </footer>
+</div>
+</body>
+</html>
