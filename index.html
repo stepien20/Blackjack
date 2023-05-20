@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gra w blackjacka</title>
     <link rel="stylesheet" href="main.css">
-    <script src="main.js" defer></script>
     <script src="karty.js" defer></script>
+    <script src="main.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -22,15 +22,23 @@
     </section>
     <!-- ustawienia gry -->
     <section id="windowSettings" class="hidden"> 
-        <label for="decknum">Jaką ilością talii kart zagrać? <input type="number" id="decknum" name="decknum"></label>
-        <label for="bet">Stawka: <input type="number"></label>
+        <label for="decknum">Jaką ilością talii kart zagrać? <input type="number" value=1 id="decknum" name="decknum"></label>
+        <label for="bet">Stawka: <input type="number" value="100"></label>
         <p>Potencjalna wygrana:<span id="betWin"></span></p>
         <button id="butPlay">Graj</button>
     </section>
     <!-- okno gry -->
     <main class="hidden"> 
-        <div id="usercards"></div>
-        <div id="croupiercards"></div>
+        <div id="usercards">
+            <h2>Twoje karty: </h2>
+            <span id="userDisplay"></span>
+            <p>Suma punktów:<span id="playerSum"></span></p>
+        </div>
+        <div id="croupiercards">
+            <h2>Karty krupiera:</h2>
+            <span id="croupierDisplay"></span>
+            <p>Suma punktów:<span id="croupierSum"></span></p>
+        </div>
         <div id="buttons">
             <button id="hit">Hit</button>
             <button id="stand">Stand</button>
@@ -42,16 +50,23 @@
         <h2>Zasady</h2>
         <ul>
             <li>Zadaniem gracza jest uzyskanie wyniku jak nabliżej 21 punktów nie przekraczając tej liczby.</li>
-            <li>Gracz i krupier dostają po 2 karty: gracz 2 odsłonięte, natomiast krupier 1 odkrytą jedną ukrytą.</li>
+            <li>Gracz i krupier dostają po 2 karty: gracz 2 odsłonięte, natomiast krupier 1 odkrytą i jedną ukrytą.</li>
             <li>Gracz po rozdaniu może: 
                 <ul>
                 <li>Dobrać kartę-hit</li>
                 <li>Nie dobierać karty-stand</li>
                 </ul>
             </li>
-            <li><a href="punktacja.html" target="_blank">Punktacja</a></li>
+            <li>As ma wartość 1 lub 11 punktów w zależności od opłacalności dla gracza</li>
+            <li>Krupier nie dobiera kart</li>
+            <li><a href="punktacja.html" target="_blank">Więcej na temat punktacji:</a></li>
         </ul>
     </aside>
+    <article class="hidden">
+        <h2>KONIEC!!!</h2>
+        <h3>Wygrywa: <span id="winner"></span></h3>
+        <button id="back">Wróć</button>
+    </article>
     <!-- stopka -->
     <footer>
 
